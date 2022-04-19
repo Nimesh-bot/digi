@@ -12,7 +12,7 @@ const About = () => {
   const [isMission, setIsMission] = useState(true);
 
   return (
-    <section className='flex w-full min-h[80vh] px-28 py-16'>
+    <section className='flex flex-col md:flex-row w-full min-h[80vh] px-8 lg:px-28 py-16 gap-y-4'>
         {/* Who */}
         <div className='flex-1 flex flex-col gap-y-4'>
             <div className='flex flex-col'>
@@ -36,8 +36,8 @@ const About = () => {
         </div>
 
         {/* Mission/Vision */}
-        <div className='flex-1 flex justify-end'>
-            <div className='rounded-md w-1/2 h-max bg-blue_dark p-8'>
+        <div className='flex-1 flex md:justify-end'>
+            <div className='rounded-md w-full md:w-1/2 h-max bg-blue_dark p-8'>
                 {
                     isMission ?
                     (
