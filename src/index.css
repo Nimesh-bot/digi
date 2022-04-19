@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Custom style */
+.listItem {
+  cursor: pointer;
+  column-gap: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: medium;
+}
+.listItem::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #2D3192;
+  transition: all 0.5s ease;
+}
+.listItem:hover::after {
+  width: 100%;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
