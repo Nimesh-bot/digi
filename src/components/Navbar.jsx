@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className='w-full h-16 bg-white flex justify-between items-center px-8 py-4'>
         {/* Logo */}
         <div className='w-32'>
-            <img src={Logo} alt="DigiSchool" className='w-full h-full object-cover'/>
+            <img src={Logo} alt="DigiSchool" className='w-full h-full object-cover mix-blend-multiply'/>
         </div>
 
         {/* Menu */}
