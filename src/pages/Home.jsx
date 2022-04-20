@@ -1,5 +1,6 @@
 import React from 'react'
 import About from '../components/About'
+import Benefits from '../components/Benefits'
 import Courses from '../components/Courses'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../components/Responsive/SocialLinks'
@@ -16,6 +17,7 @@ const Home = () => {
           <Welcome />
           <About />
           <Courses />
+          <Benefits />
         </div>
     </div>
   )

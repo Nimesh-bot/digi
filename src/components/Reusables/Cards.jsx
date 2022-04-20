@@ -7,7 +7,7 @@ const Cards = ({ img, alt, desc }) => {
             <img src={img} alt={alt} className='w-full h-full rounded-t-md object-cover transition-all hover:scale-110'/>
         </div>
         <div className='w-full h-3/6 px-4'>
-            <p>{desc}</p>
+            <p className='text-md text-black font-light'>{desc}</p>
         </div>
     </div>
   )
