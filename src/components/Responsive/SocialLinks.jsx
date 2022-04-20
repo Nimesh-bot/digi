@@ -4,7 +4,7 @@ import { GrLinkedinOption } from 'react-icons/gr'
 
 const SocialLinks = () => {
   return (
-    <div className='w-full flex lg:hidden justify-center gap-x-4 items-center py-4 bg-blue_dark z-20 rounded-b-lg'>
+    <div className='w-full flex lg:hidden justify-center gap-x-4 items-center py-4 bg-blue_dark rounded-b-lg'>
         <FaFacebookF className='text-white cursor-pointer'/>
         <FaInstagram className='text-white cursor-pointer'/>
         <FaTwitter className='text-white cursor-pointer'/>

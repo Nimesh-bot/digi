@@ -18,6 +18,7 @@ module.exports = {
       'orange': '#F15A25',
       'red': '#AC2333',
       'green': '#2C9942',
+      'gray_light': "#F7F7F7",
     },
     extend: {
       screens: {

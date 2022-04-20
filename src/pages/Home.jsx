@@ -1,5 +1,6 @@
 import React from 'react'
 import About from '../components/About'
+import Courses from '../components/Courses'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../components/Responsive/SocialLinks'
 import Social from '../components/Social'
@@ -7,12 +8,15 @@ import Welcome from '../components/Welcome'
 
 const Home = () => {
   return (
-    <div className='w-full min-h-screen relative'>  
+    <div className='w-full flex flex-col relative px-4 lg:px-20'>  
         <SocialLinks />
         <Social /> 
         <Navbar />
-        <Welcome />
-        <About />
+        <div className='flex flex-col gap-y-16 mt-10'>
+          <Welcome />
+          <About />
+          <Courses />
+        </div>
     </div>
   )
 }

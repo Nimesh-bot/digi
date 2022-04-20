@@ -5,10 +5,10 @@ import Logo from '../assets/images/DigiSchool.png';
 
 const Navbar = () => {
   return (
-    <nav className='w-full h-16 bg-white flex justify-between items-center px-8 py-4'>
+    <nav className='w-full h-16 fixed top-0 left-0 bg-white flex justify-between items-center py-4 z-10 lg:px-20'>
         {/* Logo */}
-        <div className='w-32'>
-            <img src={Logo} alt="DigiSchool" className='w-full h-full object-cover mix-blend-multiply'/>
+        <div className='w-32 h-full'>
+            <img src={Logo} alt="DigiSchool" className='w-full h-full object-cover'/>
         </div>
 
         {/* Menu */}

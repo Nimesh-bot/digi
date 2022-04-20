@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { MdOutlineNavigateNext } from 'react-icons/md'
+import Heading from './Reusables/Heading'
 
 const paragraph1 = "Digi is brought to you by NCC Education." 
 const paragraph2 = "Originally part of the National Computing Centre, NCC Education was established as a computing initiative by the British Government in 1966. Today, NCC Education is an exam board and a global provider of British education in Computing and Business. The head office is situated in Manchester, UK."
@@ -12,13 +13,10 @@ const About = () => {
   const [isMission, setIsMission] = useState(true);
 
   return (
-    <section className='flex flex-col md:flex-row w-full min-h[80vh] px-8 lg:px-28 py-16 gap-y-4'>
+    <section className='flex flex-col lg:flex-row w-full min-h[100vh] gap-y-4'>
         {/* Who */}
         <div className='flex-1 flex flex-col gap-y-4'>
-            <div className='flex flex-col'>
-                <h5 className='text-xl text-black font-light'>About us</h5>
-                <h1 className='uppercase text-5xl text-black font-bold'>Know more about us</h1>
-            </div>
+            <Heading heading5="ABOUT US" heading1="WHO ARE WE" />
             <div className='flex flex-col gap-y-2'>
                 <p className='text-md font-light text-black'>
                     {paragraph1}
@@ -36,7 +34,7 @@ const About = () => {
         </div>
 
         {/* Mission/Vision */}
-        <div className='flex-1 flex md:justify-end'>
+        <div className='flex-1 flex lg:justify-end md:justify-center'>
             <div className='rounded-md w-full md:w-1/2 h-max bg-blue_dark p-8'>
                 {
                     isMission ?
