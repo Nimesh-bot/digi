@@ -13,7 +13,7 @@ const About = () => {
   const [isMission, setIsMission] = useState(true);
 
   return (
-    <section className='flex flex-col lg:flex-row w-full min-h[100vh] gap-y-4'>
+    <section className='flex flex-col lg:flex-row w-full min-h[100vh] gap-y-4 px-4 lg:px-20'>
         {/* Who */}
         <div className='flex-1 flex flex-col gap-y-4'>
             <Heading heading5="ABOUT US" heading1="WHO ARE WE" />
@@ -36,10 +36,11 @@ const About = () => {
         {/* Mission/Vision */}
         <div className='flex-1 flex lg:justify-end md:justify-center'>
             <div className='rounded-md w-full md:w-1/2 h-max bg-blue_dark p-8'>
+                <div className='h-auto flex flex-col justify-between gap-y-4 transition-all'>
                 {
                     isMission ?
                     (
-                        <div className='flex flex-col justify-between gap-y-4'>
+                        <>
                             <div>
                                 <h2 className='uppercase text-2xl text-white font-medium'>Mission</h2>
                                 <p className='text-md text-disable'>
@@ -55,11 +56,11 @@ const About = () => {
                                     <MdOutlineNavigateNext className='text-white text-xl'/>
                                 </div>
                             </div>
-                        </div>
+                        </>
                     )
                     :
                     (
-                        <div className='flex flex-col justify-between gap-y-4'>
+                        <>
                             <div>
                                 <h2 className='uppercase text-2xl text-white font-medium'>Vision</h2>
                                 <p className='text-md text-disable'>
@@ -75,9 +76,10 @@ const About = () => {
                                     <MdOutlineNavigateNext className='text-disable text-xl'/>
                                 </div>
                             </div>
-                        </div>
+                        </>
                     )
                 }
+                </div>
             </div>
         </div>
     </section>

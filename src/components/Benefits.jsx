@@ -23,7 +23,7 @@ const reasons = [
 
 const Benefits = () => {
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full items-center gap-y-4'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full items-center gap-y-4 px-4 lg:px-20'>
         {/* Text */}
         <div className='flex-1 h-full flex flex-col'>
             <div className='flex flex-col gap-y-8 '>

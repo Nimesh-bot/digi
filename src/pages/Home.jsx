@@ -5,15 +5,17 @@ import Blogs from '../components/Blogs'
 import Courses from '../components/Courses'
 import Event from '../components/Event'
 import Footer from '../components/Footer'
+import Integrate from '../components/Integrate'
 import Navbar from '../components/Navbar'
 import Partners from '../components/Partners'
 import SocialLinks from '../components/Responsive/SocialLinks'
 import Social from '../components/Social'
+import Superhero from '../components/Superhero'
 import Welcome from '../components/Welcome'
 
 const Home = () => {
   return (
-    <div className='w-full flex flex-col relative px-4 lg:px-20'>  
+    <div className='w-full flex flex-col relative'>  
         <SocialLinks />
         <Social /> 
         <Navbar />
@@ -25,6 +27,8 @@ const Home = () => {
           <Partners />
           <Event />
           <Blogs />
+          <Superhero />
+          <Integrate />
           <Footer />
         </div>
     </div>

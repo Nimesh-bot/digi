@@ -39,7 +39,7 @@ const coursesData = [
 
 const Courses = () => {
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full lg:px-20 px-4'>
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="COURSES" heading1="we offer" />

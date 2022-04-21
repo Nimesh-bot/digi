@@ -6,7 +6,7 @@ import Heading from './Reusables/Heading';
 
 const Welcome = () => {
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full h-[80vh] justify-between items-center'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full h-[80vh] justify-between items-center px-4 lg:px-20'>
         {/* Text */}
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
