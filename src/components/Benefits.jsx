@@ -1,9 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ScrollContext } from '../context/ScrollContext'
 import Heading from './Reusables/Heading'
 
 const BenefitsList = ({ reason }) => (
-    <div className='rounded-md bg-blue_dark p-4 w-full'>
+    <div className='rounded-md bg-blue_dark p-4 w-full' data-aos="fade-left">
         <p className='text-md font-light text-white'>{reason}</p>
     </div>
 )
@@ -25,6 +27,11 @@ const reasons = [
 const Benefits = () => {
   const { BenefitsSection } = useContext(ScrollContext);
   
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className='flex flex-col lg:flex-row w-11/12 lg:w-full items-center gap-y-4 px-4 lg:px-20' ref={BenefitsSection}>
         {/* Text */}
