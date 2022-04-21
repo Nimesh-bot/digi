@@ -6,6 +6,7 @@ import Courses from '../components/Courses'
 import Event from '../components/Event'
 import Footer from '../components/Footer'
 import Integrate from '../components/Integrate'
+import Map from '../components/Map'
 import Navbar from '../components/Navbar'
 import Partners from '../components/Partners'
 import Modal from '../components/Responsive/Modal'
@@ -40,7 +41,10 @@ const Home = () => {
           <Blogs />
           <Superhero />
           <Integrate />
-          <Footer />
+          <div>
+            <Map />
+            <Footer />
+          </div>
         </div>
     </div>
   )

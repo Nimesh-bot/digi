@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Cards from './Reusables/Cards'
 import Heading from './Reusables/Heading'
 import Explorer from '../assets/images/Courses/explorer.png';
 import Trailblazers from '../assets/images/Courses/digi-trailblazers.png';
 import Navigators from '../assets/images/Courses/navigators.png';
 import LevelTwo from '../assets/images/Courses/level-two-website.png';
+import { ScrollContext } from '../context/ScrollContext';
 
 const coursesData = [
     {
@@ -38,8 +39,9 @@ const coursesData = [
 ]
 
 const Courses = () => {
+  const { CourseSection } = useContext(ScrollContext)
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full lg:px-20 px-4'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full lg:px-20 px-4' ref={CourseSection}>
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="COURSES" heading1="we offer" />

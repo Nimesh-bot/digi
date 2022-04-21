@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Heading from './Reusables/Heading'
 import { AiOutlineSend } from 'react-icons/ai'
 import styled from 'styled-components'
+import { ScrollContext } from '../context/ScrollContext'
 
 const Icon = styled.div`
   width: 1rem;
@@ -27,8 +28,10 @@ const Integrate = () => {
     setRole(e.target.value)
   }
   
+  const { IntegrateSection } = useContext(ScrollContext)
+
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full justify-between items-center px-4 lg:px-20'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full justify-between items-center px-4 lg:px-20' ref={IntegrateSection}>
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="Join us" heading1="Integrate your school" />

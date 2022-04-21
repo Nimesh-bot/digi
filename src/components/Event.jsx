@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ScrollContext } from '../context/ScrollContext'
 import Events from './Reusables/Events'
 import Heading from './Reusables/Heading'
 
@@ -41,11 +42,12 @@ const eventData = [
 ]
 
 const Event = () => {
-  const [active, setActive] = useState(1)
-  
+  const [active, setActive] = useState(2)
+  const { EventSection } = useContext(ScrollContext)
+
   const newDate = new Date()
   const currentDate = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + newDate.getDate()
-  console.log(String(currentDate))
+  console.log(currentDate)
 
   const getActive = (index) => {
     if(index === active) {
@@ -57,13 +59,13 @@ const Event = () => {
   }
 
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full justify-between items-center px-4 lg:px-20'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full justify-between items-center px-4 lg:px-20' ref={EventSection}>
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="Participate in" heading1="OUR events and activities" />
                 <div className='w-full bg-gray_light min-h-[30vh] px-4 lg:px-8'>
                   <ul className='flex gap-x-4 justify-start lg:gap-x-16 lg:justify-center py-4 cursor-pointer'>
-                    <li className={`${getActive(1)}`} onClick={() => setActive(1)}>Upcoming</li>
+                    {/* <li className={`${getActive(1)}`} onClick={() => setActive(1)}>Upcoming</li> */}
                     <li className={`${getActive(2)}`} onClick={() => setActive(2)}>2022</li>
                     <li className={`${getActive(3)}`} onClick={() => setActive(3)}>2021</li>
                     <li className={`${getActive(4)}`} onClick={() => setActive(4)}>2020</li>
@@ -72,17 +74,17 @@ const Event = () => {
                   {/* Events */}
                   <div className='w-full flex gap-x-8 flex-wrap'>
                     {
-                      active === 1 ?
-                      (
-                        <>
-                          {
-                            eventData.filter(event => event.date > String(currentDate)).map((event, index) => (
-                              <Events key={index} img={event.img} alt={event.alt} desc={event.desc} date={event.date} />            
-                            ))
-                          }
-                        </>
-                      )
-                      :
+                      // active === 1 ?
+                      // (
+                      //   <>
+                      //     {
+                      //       eventData.filter(event => event.date > String(currentDate)).map((event, index) => (
+                      //         <Events key={index} img={event.img} alt={event.alt} desc={event.desc} date={event.date} />            
+                      //       ))
+                      //     }
+                      //   </>
+                      // )
+                      // :
                       active === 2 ?
                       (
                         <>

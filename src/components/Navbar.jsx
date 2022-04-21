@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IoIosCall } from 'react-icons/io';
 
 import Logo from '../assets/images/DigiSchool.png';
+import { ScrollContext } from '../context/ScrollContext';
 
 const Navbar = ({ handleModal }) => {
+  const { scrollToHome, scrollToCourse, scrollToAbout, scrollToIntegrate, scrollToSuperHero } = useContext(ScrollContext);
+
   return (
     <nav className='w-full h-16 fixed top-0 left-0 bg-white flex justify-between items-center py-4 z-10 px-4 lg:px-20'>
         {/* Logo */}
@@ -13,11 +16,11 @@ const Navbar = ({ handleModal }) => {
 
         {/* Menu */}
         <ul className='hidden lg:flex gap-x-8'>
-            <li className={`listItem`}>Home</li>
-            <li className={`listItem`}>About us</li>
-            <li className={`listItem`}>Courses</li>
-            <li className={`listItem`}>Contact us</li>
-            <li className={`listItem`}>Your superhero</li>
+            <li className={`listItem`} onClick={scrollToHome}>Home</li>
+            <li className={`listItem`} onClick={scrollToAbout}>About us</li>
+            <li className={`listItem`} onClick={scrollToCourse}>Courses</li>
+            <li className={`listItem`} onClick={scrollToIntegrate}>Integrate</li>
+            <li className={`listItem`} onClick={scrollToSuperHero}>Your superhero</li>
         </ul>
 
         {/* Contact */}

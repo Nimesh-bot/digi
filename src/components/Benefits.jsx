@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ScrollContext } from '../context/ScrollContext'
 import Heading from './Reusables/Heading'
 
 const BenefitsList = ({ reason }) => (
@@ -22,8 +23,10 @@ const reasons = [
 ]
 
 const Benefits = () => {
+  const { BenefitsSection } = useContext(ScrollContext);
+  
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full items-center gap-y-4 px-4 lg:px-20'>
+    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full items-center gap-y-4 px-4 lg:px-20' ref={BenefitsSection}>
         {/* Text */}
         <div className='flex-1 h-full flex flex-col'>
             <div className='flex flex-col gap-y-8 '>
