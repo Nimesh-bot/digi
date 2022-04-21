@@ -4,6 +4,16 @@ import Student1 from '../assets/images/male.jpg';
 import Student2 from '../assets/images/female.jpg';
 import Heading from './Reusables/Heading';
 import { ScrollContext } from '../context/ScrollContext'
+import styled from 'styled-components'
+
+const Icon = styled.span`
+    transition: all 0.5s ease;
+`
+const Button = styled.button`
+    &:hover ${Icon} {
+        transform: scale(1.5);
+    }
+`
 
 const Welcome = () => {
   const { HomeSection, scrollToIntegrate } = useContext(ScrollContext)
@@ -16,10 +26,10 @@ const Welcome = () => {
                 <Heading heading5="Welcome to digi school" heading1="UK IT COURSES IN NEPAL" />
                 <div className='w-11/12 md:w-auto flex flex-col md:flex-row gap-y-4 gap-x-4 lg:items-center'>
                     <button className='bg-blue text-white rounded px-4 py-2 hover:bg-blue_dark' onClick={scrollToIntegrate}>INTEGRATE NOW</button>
-                    <button className='border-[1px] border-blue justify-center rounded px-4 py-2 text-blue flex items-center gap-x-2'>
-                        <span><IoIosPlay /></span>
+                    <Button className='border-[1px] border-blue justify-center rounded px-4 py-2 text-blue flex items-center gap-x-2' onClick={() => window.open("https://www.youtube.com/channel/UCDzzGex8PyrA6nEVZ4j1G2w")}>
+                        <Icon><IoIosPlay /></Icon>
                         WATCH VIDEO
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>
