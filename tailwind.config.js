@@ -21,9 +21,7 @@ module.exports = {
       'gray_light': "#F7F7F7",
     },
     extend: {
-      screens: {
-        mf: "990px",
-      },
+      
       keyframes: {
         "slide-in": {
           "0%": {
