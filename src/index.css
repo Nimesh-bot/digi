@@ -72,6 +72,41 @@ code {
   }
 }
 
+/* NavHeading */
+.header{
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  z-index: 10;
+}
+.headerScroll{
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  z-index: 10;
+}
+
+@media screen and (max-width:768px){
+  .header{
+    padding: 0 1.5rem;
+  }
+  .headerScroll{
+    padding: 0 1.5rem;
+  }
+}
+
 
 @tailwind base;
 @tailwind components;

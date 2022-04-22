@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { IoIosCall } from 'react-icons/io';
 
 import Logo from '../assets/images/DigiSchool.png';
@@ -7,8 +7,20 @@ import { ScrollContext } from '../context/ScrollContext';
 const Navbar = ({ handleModal }) => {
   const { scrollToHome, scrollToCourse, scrollToAbout, scrollToIntegrate, scrollToSuperHero } = useContext(ScrollContext);
 
+  const [change, setChange] = useState(false);
+
+  const changeNav = () =>{
+    if(window.scrollY >= 80){
+      setChange(true);
+    }
+    else{
+      setChange(false);
+    }
+  };
+  window.addEventListener('scroll', changeNav)
+    
   return (
-    <nav className='w-full h-16 fixed top-0 left-0 bg-white flex justify-between items-center py-4 z-10 px-4 lg:px-20'>
+    <nav className={change ? `headerScroll lg:top-0 lg:px-20` : `header lg:top-0 lg-px-20`}>
         {/* Logo */}
         <div className='w-32 h-full'>
             <img src={Logo} alt="DigiSchool" className='w-full h-full object-cover'/>
@@ -31,9 +43,9 @@ const Navbar = ({ handleModal }) => {
 
         {/* Hamburger */}
         <div className='flex lg:hidden items-end flex-col gap-y-2' onClick={handleModal}>
-            <div className='w-5 h-[1.5px]  bg-blue_dark'></div>
-            <div className='w-4 h-[1.5px]  bg-blue_dark'></div>
-            <div className='w-3 h-[1.5px]  bg-blue_dark'></div>
+            <div className='w-5 h-[1.5px] bg-blue_dark'></div>
+            <div className='w-4 h-[1.5px] bg-blue_dark'></div>
+            <div className='w-3 h-[1.5px] bg-blue_dark'></div>
         </div>                
     </nav>
   )
