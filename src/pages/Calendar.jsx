@@ -1,7 +1,6 @@
 import React from 'react'
 import Heading from '../components/Reusables/Heading'
 
-import $ from 'jquery';
  
 //Here are the modules for fullcalendar and dayclick event
 import FullCalendar from '@fullcalendar/react'
