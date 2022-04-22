@@ -41,11 +41,11 @@ const coursesData = [
 const Courses = () => {
   const { CourseSection } = useContext(ScrollContext)
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full lg:px-20 px-4' ref={CourseSection}>
+    <div className='flex flex-col lg:flex-row w-full lg:px-20 px-4 md:px-8' ref={CourseSection}>
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="COURSES" heading1="we offer" />
-                <div className='flex justify-between gap-y-8 flex-wrap'>
+                <div className='flex md:gap-x-8 lg:justify-between gap-y-8 flex-wrap'>
                     {
                         coursesData.map((data, index) => (
                             <Cards 

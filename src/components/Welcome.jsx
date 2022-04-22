@@ -19,7 +19,7 @@ const Welcome = () => {
   const { HomeSection, scrollToIntegrate } = useContext(ScrollContext)
 
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full h-[80vh] justify-between items-center px-4 lg:px-20' ref={HomeSection}>
+    <div className='flex flex-col lg:flex-row w-full h-[80vh] justify-between lg:items-center overflow-hidden px-4 md:px-8 lg:px-20' ref={HomeSection}>
         {/* Text */}
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>

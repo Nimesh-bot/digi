@@ -17,7 +17,7 @@ const About = () => {
   const { WhoSection } = useRef(ScrollContext);
 
   return (
-    <div className='flex flex-col lg:flex-row w-full min-h[100vh] gap-y-4 px-4 lg:px-20' ref={WhoSection}>
+    <div className='flex flex-col lg:flex-row w-full justify-between items-center overflow-hidden px-4 md:px-8 gap-y-4 lg:px-20' ref={WhoSection}>
         {/* Who */}
         <div className='flex-1 flex flex-col gap-y-4'>
             <Heading heading5="ABOUT US" heading1="WHO ARE WE" />

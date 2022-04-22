@@ -47,7 +47,6 @@ const Event = () => {
 
   const newDate = new Date()
   const currentDate = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + newDate.getDate()
-  console.log(currentDate)
 
   const getActive = (index) => {
     if(index === active) {
@@ -59,12 +58,12 @@ const Event = () => {
   }
 
   return (
-    <div className='flex flex-col lg:flex-row w-11/12 lg:w-full justify-between items-center px-4 lg:px-20' ref={EventSection}>
+    <div className='flex flex-col lg:flex-row w-full justify-between px-4 md:px-8 lg:px-20' ref={EventSection}>
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="Participate in" heading1="OUR events and activities" />
                 <div className='w-full bg-gray_light min-h-[30vh] px-4 lg:px-8'>
-                  <ul className='flex gap-x-4 justify-start lg:gap-x-16 lg:justify-center py-4 cursor-pointer'>
+                  <ul className='flex gap-x-4 lg:gap-x-16 justify-center py-4 cursor-pointer'>
                     {/* <li className={`${getActive(1)}`} onClick={() => setActive(1)}>Upcoming</li> */}
                     <li className={`${getActive(2)}`} onClick={() => setActive(2)}>2022</li>
                     <li className={`${getActive(3)}`} onClick={() => setActive(3)}>2021</li>
