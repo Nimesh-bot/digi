@@ -12,7 +12,9 @@ const Partners = () => {
                       <img src='https://elitegrandschool.edu.np/uploads/website/website-20210815081505-386.png' alt='Elite Grand School' className='w-auto h-12 lg:grayscale hover:grayscale-0' />
                       <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ncc_edu.png/1200px-Ncc_edu.png' alt='NCC EDUCATION' className='w-auto h-12 lg:grayscale hover:grayscale-0' />
                       <img src='https://wingsschool.edu.np/images/main/Wed-03-30-05-1437143444-logo.png' alt='Wings School' className='w-auto h-12 lg:grayscale hover:grayscale-0' />
-
+                      <img src='https://elitegrandschool.edu.np/uploads/website/website-20210815081505-386.png' alt='Elite Grand School' className='w-auto h-12 lg:grayscale hover:grayscale-0' />
+                      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ncc_edu.png/1200px-Ncc_edu.png' alt='NCC EDUCATION' className='w-auto h-12 lg:grayscale hover:grayscale-0' />
+                      <img src='https://wingsschool.edu.np/images/main/Wed-03-30-05-1437143444-logo.png' alt='Wings School' className='w-auto h-12 lg:grayscale hover:grayscale-0' />
                     </div>
                 </div>
             </div>
