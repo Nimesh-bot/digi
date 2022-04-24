@@ -5,7 +5,7 @@ import Logo from '../assets/images/DigiSchool.png';
 import { ScrollContext } from '../context/ScrollContext';
 
 const Navbar = ({ handleModal }) => {
-  const { scrollToHome, scrollToCourse, scrollToAbout, scrollToIntegrate, scrollToSuperHero } = useContext(ScrollContext);
+  const { scrollToHome, scrollToCourse, scrollToAbout, scrollToEvent, scrollToIntegrate, scrollToSuperHero } = useContext(ScrollContext);
 
   const [change, setChange] = useState(false);
 
@@ -31,6 +31,7 @@ const Navbar = ({ handleModal }) => {
             <li className={`listItem`} onClick={scrollToHome}>Home</li>
             <li className={`listItem`} onClick={scrollToAbout}>About us</li>
             <li className={`listItem`} onClick={scrollToCourse}>Courses</li>
+            <li className={`listItem`} onClick={scrollToEvent}>Events</li>
             <li className={`listItem`} onClick={scrollToIntegrate}>Integrate</li>
             <li className={`listItem`} onClick={scrollToSuperHero}>Your superhero</li>
         </ul>

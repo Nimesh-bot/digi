@@ -7,6 +7,7 @@ const ScrollProvider = ({ children }) => {
   const CourseSection = useRef(null)
   const WhoSection = useRef(null)
   const BenefitsSection = useRef(null)
+  const EventSection = useRef(null)
   const IntegrateSection = useRef(null)
   const SuperHeroSection = useRef(null)
 
@@ -16,7 +17,6 @@ const ScrollProvider = ({ children }) => {
             behavior: 'smooth',
         });
     }
-
     const scrollToAbout = () => {
         window.scrollTo({
             top: WhoSection.current.offsetTop,
@@ -26,6 +26,12 @@ const ScrollProvider = ({ children }) => {
     const scrollToCourse = () => {
         window.scrollTo({
             top: CourseSection.current.offsetTop,
+            behavior: 'smooth',
+        });
+    }
+    const scrollToEvent = () => {
+        window.scrollTo({
+            top: EventSection.current.offsetTop,
             behavior: 'smooth',
         });
     }
@@ -49,7 +55,7 @@ const ScrollProvider = ({ children }) => {
     }
 
     return (
-        <ScrollContext.Provider value={{ HomeSection, CourseSection, WhoSection, BenefitsSection, IntegrateSection, SuperHeroSection, scrollToBenefits, scrollToHome, scrollToAbout, scrollToCourse, scrollToIntegrate, scrollToSuperHero }}>
+        <ScrollContext.Provider value={{ HomeSection, CourseSection, WhoSection, BenefitsSection, IntegrateSection, SuperHeroSection, scrollToBenefits, scrollToHome, scrollToAbout, scrollToCourse, scrollToEvent, scrollToIntegrate, scrollToSuperHero }}>
             {children}
         </ScrollContext.Provider>
     )

@@ -2,7 +2,6 @@ import React from 'react'
 import Logo from '../assets/images/DigiSchool.png'
 
 const Ad = ({ handleSkip, handleIntegrate }) => {
-
   return (
     <div className='fixed top-0 left-0 w-full h-screen bg-white backdrop-opacity-5 flex flex-col justify-center px-4 text-center items-center z-20'>
         <img src={Logo} alt='DigiSchool' className='w-40 h-auto'/>
