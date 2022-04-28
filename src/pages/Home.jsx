@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import About from '../components/About'
 import Ad from '../components/Ad'
 import Benefits from '../components/Benefits'
@@ -11,11 +11,9 @@ import Map from '../components/Map'
 import Partners from '../components/Partners'
 import Superhero from '../components/Superhero'
 import Welcome from '../components/Welcome'
-import { ScrollContext } from '../context/ScrollContext'
 
 const Home = () => {
   const [open, setOpen] = useState(false);
-  const { scrollToIntegrate } = useContext(ScrollContext);
   
   useEffect(() => {
     setOpen(true)
@@ -23,7 +21,6 @@ const Home = () => {
   
   const handleIntegrate = () => {
     setOpen(false)
-    scrollToIntegrate()
   }
 
   return (  

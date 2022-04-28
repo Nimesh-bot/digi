@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 
 import { MdOutlineNavigateNext } from 'react-icons/md'
-import { ScrollContext } from '../context/ScrollContext'
 import Heading from './Reusables/Heading'
 
 const paragraph1 = "Digi is brought to you by NCC Education." 
@@ -14,10 +13,9 @@ const vision = "Transforming Digi Kids to Digipreneurs."
 
 const About = () => {
   const [isMission, setIsMission] = useState(true);
-  const { WhoSection } = useRef(ScrollContext);
 
   return (
-    <div className='flex flex-col lg:flex-row w-full justify-between items-center overflow-hidden px-4 md:px-8 gap-y-4 lg:px-20' ref={WhoSection}>
+    <div className='flex flex-col lg:flex-row w-full justify-between items-center overflow-hidden px-4 md:px-8 gap-y-4 lg:px-20' id="about">
         {/* Who */}
         <div className='flex-1 flex flex-col gap-y-4'>
             <Heading heading5="ABOUT US" heading1="WHO ARE WE" />

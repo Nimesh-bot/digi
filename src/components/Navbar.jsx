@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { IoIosCall } from 'react-icons/io';
 
 import Logo from '../assets/images/DigiSchool.png';
-import { ScrollContext } from '../context/ScrollContext';
+import { Link } from 'react-scroll'
 
 const Navbar = ({ handleModal }) => {
-  const { scrollToHome, scrollToCourse, scrollToAbout, scrollToEvent, scrollToIntegrate, scrollToSuperHero } = useContext(ScrollContext);
+  // const { scrollToHome, scrollToCourse, scrollToAbout, scrollToEvent, scrollToIntegrate, scrollToSuperHero } = useContext(ScrollContext);
 
   const [change, setChange] = useState(false);
 
@@ -28,12 +28,12 @@ const Navbar = ({ handleModal }) => {
 
         {/* Menu */}
         <ul className='hidden lg:flex gap-x-8'>
-            <li className={`listItem`} onClick={scrollToHome}>Home</li>
-            <li className={`listItem`} onClick={scrollToAbout}>About us</li>
-            <li className={`listItem`} onClick={scrollToCourse}>Courses</li>
-            <li className={`listItem`} onClick={scrollToEvent}>Events</li>
-            <li className={`listItem`} onClick={scrollToIntegrate}>Integrate</li>
-            <li className={`listItem`} onClick={scrollToSuperHero}>Your superhero</li>
+            <Link to="home" smooth={true}><li className={`listItem`}>Home</li></Link>
+            <Link to="about" smooth={true}><li className={`listItem`}>About us</li></Link>
+            <Link to="courses" smooth={true}><li className={`listItem`}>Courses</li></Link>
+            <Link to="event" smooth={true}><li className={`listItem`}>Events</li></Link>
+            <Link to="integrate" smooth={true}><li className={`listItem`}>Integrate</li></Link>
+            <Link to="superhero" smooth={true}><li className={`listItem`}>Your superhero</li></Link>
         </ul>
 
         {/* Contact */}

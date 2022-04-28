@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { ScrollContext } from '../context/ScrollContext'
 import Heading from './Reusables/Heading'
 
 const BenefitsList = ({ reason }) => (
@@ -25,15 +24,13 @@ const reasons = [
 ]
 
 const Benefits = () => {
-  const { BenefitsSection } = useContext(ScrollContext);
-  
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
   return (
-    <div className='flex flex-col lg:flex-row w-full justify-between items-center overflow-hidden px-4 lg:px-20 md:px-8' ref={BenefitsSection}>
+    <div className='flex flex-col lg:flex-row w-full justify-between items-center overflow-hidden px-4 lg:px-20 md:px-8' id="beneifts">
         {/* Text */}
         <div className='flex-1 h-full flex flex-col'>
             <div className='flex flex-col gap-y-8 '>

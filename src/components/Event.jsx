@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react'
-import { ScrollContext } from '../context/ScrollContext'
+import React, { useState } from 'react'
 import Events from './Reusables/Events'
 import Heading from './Reusables/Heading'
 
@@ -43,7 +42,6 @@ const eventData = [
 
 const Event = () => {
   const [active, setActive] = useState(2)
-  const { EventSection } = useContext(ScrollContext)
 
   const newDate = new Date()
   const currentDate = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + newDate.getDate()
@@ -58,7 +56,7 @@ const Event = () => {
   }
 
   return (
-    <div className='flex flex-col lg:flex-row w-full justify-between px-4 md:px-8 lg:px-20' ref={EventSection}>
+    <div className='flex flex-col lg:flex-row w-full justify-between px-4 md:px-8 lg:px-20' id="event">
         <div className='flex-1 h-full flex flex-col justify-center'>
             <div className='flex flex-col gap-y-8 '>
                 <Heading heading5="Participate in" heading1="OUR events and activities" />
