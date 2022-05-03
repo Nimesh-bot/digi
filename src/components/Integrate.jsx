@@ -29,12 +29,12 @@ const Button = styled.button`
 const Integrate = () => {
   const { pending } = useSelector((state) => state.integrate);
 
-  const [school_type, setSchool_type] = useState('government')
+  const [school_type, setSchool_type] = useState('Government')
   const handleSchoolType = (e) => {
     setSchool_type(e.target.value)
   }
 
-  const [user_type, setUser_type] = useState('school')
+  const [user_type, setUser_type] = useState('School')
   const handleRole = (e) => {
     setUser_type(e.target.value)
   }
@@ -88,11 +88,11 @@ const Integrate = () => {
                     <label>School Type</label>
                     <div className='flex gap-x-16'>
                       <div className='flex gap-x-2 items-center'>
-                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="government" checked={school_type === 'government'} onChange={handleSchoolType}/>
+                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="Government" checked={school_type === 'Government'} onChange={handleSchoolType}/>
                         <label>Government</label>
                       </div>
                       <div className='flex gap-x-2 items-center'>
-                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="private" checked={school_type === 'private'} onChange={handleSchoolType}/>
+                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="Private" checked={school_type === 'Private'} onChange={handleSchoolType}/>
                         <label>Private</label>
                       </div>
                     </div>
@@ -107,11 +107,11 @@ const Integrate = () => {
                     <label>Integrate as</label>
                     <div className='flex gap-x-16'>
                       <div className='flex gap-x-2 items-center'>
-                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="school" checked={user_type === 'school'} onChange={handleRole}/>
+                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="School" checked={user_type === 'School'} onChange={handleRole}/>
                         <label>School</label>
                       </div>
                       <div className='flex gap-x-2 items-center'>
-                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="agent" checked={user_type === 'agent'} onChange={handleRole}/>
+                        <input className='w-auto rounded-md border-[1px] border-disable px-4 py-2' type='radio' value="Agent" checked={user_type === 'Agent'} onChange={handleRole}/>
                         <label>Agent</label>
                       </div>
                     </div>

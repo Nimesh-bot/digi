@@ -3,49 +3,51 @@ import React from 'react';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
 import { Eventcalendar, Select, setOptions, Popup, Input, Textarea, Checkbox, Radio, RadioGroup, Datepicker, SegmentedGroup, SegmentedItem, formatDate } from '@mobiscroll/react';
 import Heading from '../components/Reusables/Heading';
+import { getEvent } from '../redux/apiCalls';
+import { useDispatch } from 'react-redux';
 
 setOptions({
     theme: 'ios',
     themeVariant: 'light'
 });
 
-const defaultEvents = [{
-    id: 1,
-    start: '2022-04-08T13:00',
-    end: '2022-04-08T13:30',
-    title: 'Blokchain Introduction',
-    description: '',
-    allDay: false,
-    status: 'free',
-    color: '#26c57d'
-}, {
-    id: 2,
-    start: '2022-04-29T15:00',
-    end: '2022-04-29T16:00',
-    title: 'AR/VR Workshop',
-    description: '',
-    allDay: false,
-    status: 'busy',
-    color: '#fd966a'
-}, {
-    id: 3,
-    start: '2022-04-28T18:00',
-    end: '2022-04-28T22:00',
-    title: 'Web Development Workshop',
-    description: '',
-    allDay: false,
-    status: 'free',
-    color: '#37bbe4'
-}, {
-    id: 4,
-    start: '2022-04-30T10:30',
-    end: '2022-04-30T11:30',
-    title: 'Graphic Designing Workshop',
-    description: '',
-    allDay: false,
-    status: 'busy',
-    color: '#d00f0f'
-}];
+// const defaultEvents = [{
+//     id: 1,
+//     start: '2022-04-08T13:00',
+//     end: '2022-04-08T13:30',
+//     title: 'Blokchain Introduction',
+//     description: '',
+//     allDay: false,
+//     status: 'free',
+//     color: '#26c57d'
+// }, {
+//     id: 2,
+//     start: '2022-04-29T15:00',
+//     end: '2022-04-29T16:00',
+//     title: 'AR/VR Workshop',
+//     description: '',
+//     allDay: false,
+//     status: 'busy',
+//     color: '#fd966a'
+// }, {
+//     id: 3,
+//     start: '2022-04-28T18:00',
+//     end: '2022-04-28T22:00',
+//     title: 'Web Development Workshop',
+//     description: '',
+//     allDay: false,
+//     status: 'free',
+//     color: '#37bbe4'
+// }, {
+//     id: 4,
+//     start: '2022-04-30T10:30',
+//     end: '2022-04-30T11:30',
+//     title: 'Graphic Designing Workshop',
+//     description: '',
+//     allDay: false,
+//     status: 'busy',
+//     color: '#d00f0f'
+// }];
 
 const viewSettings = {
     calendar: { labels: true }
@@ -152,6 +154,13 @@ const dateInputProps = {
 };
 
 function Calendar() {
+    // Events
+    const [defaultEvents, setDefaultEvents] = React.useState([])
+    let dispatch = useDispatch();
+    React.useEffect(() => {
+        getEvent(dispatch, setDefaultEvents)
+    }, [dispatch])
+
     const [myEvents, setMyEvents] = React.useState(defaultEvents);
     const [tempEvent, setTempEvent] = React.useState(null);
     const [isOpen, setOpen] = React.useState(false);
