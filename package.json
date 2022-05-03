@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
+    "framer-motion": "^6.3.3",
     "jquery": "^3.6.0",
     "mobiscroll-react": "^4.0.0",
     "popper.js": "^1.16.1",

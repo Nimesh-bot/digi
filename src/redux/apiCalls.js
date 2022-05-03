@@ -1,5 +1,6 @@
 import { integrateStart, integrateSuccess, integrateFailure } from "./integrateSlice";
 import axios from 'axios';
+import { setEventFailure, setEventStart, setEventSuccess } from "./eventSlice";
 
 export const integrateNow = async (data, dispatch, setMessage, setOpen, setSeverity) => {
     dispatch(integrateStart());
@@ -19,14 +20,14 @@ export const integrateNow = async (data, dispatch, setMessage, setOpen, setSever
 }
 
 export const getEvent = async (dispatch, setEventData) => {
-    dispatch(integrateStart());
+    dispatch(setEventStart());
     try{
         const res = await axios.get("https://digischool01.herokuapp.com/allevent");
-        dispatch(integrateSuccess(res.data)) 
+        dispatch(setEventSuccess(res.data)) 
         console.log(res.data)
         setEventData(res.data);
     }
     catch(err){
-        dispatch(integrateFailure());
+        dispatch(setEventFailure());
     }
 }

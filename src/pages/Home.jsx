@@ -16,7 +16,7 @@ const Home = () => {
   const [open, setOpen] = useState(false);
   
   useEffect(() => {
-    setOpen(true)
+    setOpen(false)
   }, [])
   
   const handleIntegrate = () => {
