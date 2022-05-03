@@ -5,7 +5,7 @@ import { getEvent } from '../redux/apiCalls'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 
-const Pacman = styled.div`
+const Loading = styled.div`
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -23,18 +23,6 @@ const Pacman = styled.div`
       transform: translateX(-8rem);
     }
   }
-  /* 
-  @keyframes zoom {
-    0% {
-     transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  } */
 `
 
 const Event = () => {
@@ -72,7 +60,7 @@ const Event = () => {
                     pending ?
                     (
                       <div className='flex justify-center items-center w-full h-[40vh]'>
-                        <Pacman />
+                        <Loading />
                       </div>
                     )
                     :
