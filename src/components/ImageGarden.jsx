@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { photos } from "../assets/Photos";
 import ImageModal from "./ImageModal";
 import Heading from "./Reusables/Heading";
