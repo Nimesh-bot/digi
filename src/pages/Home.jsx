@@ -6,6 +6,7 @@ import Blogs from '../components/Blogs'
 import Courses from '../components/Courses'
 import Event from '../components/Event'
 import Footer from '../components/Footer'
+import ImageGarden from '../components/ImageGarden'
 import Integrate from '../components/Integrate'
 import Map from '../components/Map'
 import Partners from '../components/Partners'
@@ -35,6 +36,7 @@ const Home = () => {
       <Partners />
       <Event />
       <Blogs />
+      <ImageGarden />
       <Superhero />
       <Integrate />
       <div>
