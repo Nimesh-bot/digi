@@ -6,6 +6,7 @@ import Modal from './components/Responsive/Modal'
 import SocialLinks from './components/Responsive/SocialLinks'
 import Social from './components/Social'
 import Navbar from './components/Navbar'
+import Blog from './pages/Blog'
 
 const App = () => {
   const [active, setActive] = useState(false);
@@ -26,7 +27,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/calendar" element={<Blog />} />
         </Routes>
       </Router>
     </div>
